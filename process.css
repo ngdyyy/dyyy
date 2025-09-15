@@ -1,0 +1,176 @@
+body {
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  "home info contact login"
+  "sidebar header header header"
+  "sidebar content content content"
+  "sidebar content content content"
+  "sidebar footer footer footer";
+  height: 729px;
+  grid-template-rows: 50px 50px 4fr 1fr 50px;
+  
+}
+
+.item {
+  padding: 10px;
+  text-align: center;
+}
+
+.item-1 {
+  align-items: center;
+  grid-area: home;
+  color: white;
+  background-color: black;
+}
+
+.item-1:hover {
+  color: red;
+  font-family:cursive ;
+}
+
+.item-2 {
+  grid-area: info;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.item-2:hover {
+  color: red;
+  font-family:cursive ;
+}
+
+.item-3 {
+  grid-area: contact;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.item-3:hover {
+  color: red;
+  font-family:cursive ;
+}
+
+.item-4 {
+  grid-area: login;
+  align-items: center;
+  color: rgb(255, 0, 0);
+  background-color: black;
+}
+
+.item-4:hover {
+  font-size: larger;
+  font-family:cursive ;
+}
+
+.item-5 {
+  grid-area: sidebar;
+  align-items: center;
+  background-color: gray;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.item-6 {
+  grid-area: header;
+  align-items: center;
+  font-size: 40px;
+  background-color: white
+}
+
+.item-7 {
+  grid-area: content;
+  align-items: center;
+  background-color: white;
+}
+
+table {
+  display: grid;
+  border: 1px solid black;
+  border-collapse: collapse;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+th, td {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+th {
+  background: black;
+  color: white;
+}
+
+tr:hover {
+  color: red;
+}
+
+th:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2) {
+  width: 25%;
+}
+
+th:nth-child(3) {
+  width: 60%;
+}
+
+th:nth-child(4) {
+  width: 50%;
+}
+
+.item-8 {
+  grid-area: footer;
+  align-items: center;
+  background-color: white;
+  text-align: end;
+}
+
+
+.register-form {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 10px;
+  padding: 20px;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background: white;
+}
+
+.register-form input, .register-form button, .register-form textarea {
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  max-width:800px;
+}
+
+.register-form button:hover {
+  background: red;
+}
+
+@media (max-width:1000px) and (min-width:768px) {
+  .container {
+    max-width: fit-content;
+  }
+}
+
+@media (max-width:768) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
